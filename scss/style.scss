@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+}
+body {
+   color: var(--gray-900);
+   cursor: default;
+   overflow-x: hidden;
+   &.lock {
+      position: fixed;
+      overflow: hidden;
+      width: 100vw;
+   }
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+.container {
+   max-width: 1190px;
+   margin: 0 auto;
+   padding: 0 25px;
+}
+
+.header {
+   height: 42px;
+   background: var(--gray-600);
+}
+
+.main__wrapper {
+   .container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0px 46px;
+      margin: 42px auto;
+   }
+}
+
+.hide {
+   display: none !important;
+}
+
+label {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   cursor: pointer;
+   input {
+      display: none;
+   }
+   span {
+      position: relative;
+      display: block;
+      max-width: 16px;
+      max-height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      &::before {
+         content: "";
+         position: absolute;
+         opacity: 0;
+         transition: 0.3s all;
+         -webkit-transition: 0.3s all;
+         -moz-transition: 0.3s all;
+         -ms-transition: 0.3s all;
+         -o-transition: 0.3s all;
+      }
+   }
+   p {
+      color: var(--gray-850);
+   }
+   input:checked {
+      & ~ span {
+         outline: 1px solid var(--orange-600);
+      }
+      & ~ span::before {
+         opacity: 1;
+      }
+      & ~ p {
+         color: var(--gray-900);
+      }
+   }
+   &.checkbox-btn {
+      span {
+         background: var(--gray-100);
+         outline: 1px solid var(--gray-400);
+         border-radius: 2px;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         -ms-border-radius: 2px;
+         -o-border-radius: 2px;
+         &::before {
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.41725L3.72698 5.89961L9 1.09961' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            background-color: var(--orange-600);
+            background-repeat: no-repeat;
+            background-position: center;
+            outline: 1px solid var(--orange-600);
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+         }
+      }
+   }
+   &.radio-btn {
+      span {
+         background: var(--gray-100);
+         outline: 1px solid var(--gray-400);
+         border-radius: 50%;
+         -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+         -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+         &::before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+            background-color: var(--orange-600);
+            outline: 1px solid var(--orange-600);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+         }
+      }
+   }
+}
+
+@import "_popup";
+@import "_block__basic";
+@import "_block__create";

@@ -1,0 +1,1049 @@
+@charset "UTF-8";
+.main__menu {
+  width: 267px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main__menu.hide-menu {
+  width: 45px;
+  white-space: nowrap;
+}
+
+.main__menu.hide-menu .menu__list ul li span:not(.count) {
+  width: 0px;
+  opacity: 0;
+}
+
+.main__menu.hide-menu .user {
+  padding: 10px 0;
+}
+
+.main__menu.hide-menu .user__info {
+  opacity: 0 !important;
+  max-width: 0px !important;
+}
+
+.main__menu.hide-menu .menu__list .hide-menu__btn::before {
+  content: "Показать";
+}
+
+.main__menu.hide-menu .menu__list.customer ul li.active::after, .main__menu.hide-menu .menu__list.executor ul li.active::after {
+  background-color: var(--blue-400);
+}
+
+.main__menu.hide-menu .menu__list.customer ul li .count, .main__menu.hide-menu .menu__list.executor ul li .count {
+  background-color: var(--blue-400);
+}
+
+.main__menu.hide-menu .menu__list.employer ul li.active::after, .main__menu.hide-menu .menu__list.applicant ul li.active::after {
+  background-color: var(--orange-600);
+}
+
+.main__menu.hide-menu .menu__list.employer ul li .count, .main__menu.hide-menu .menu__list.applicant ul li .count {
+  background-color: var(--orange-600);
+}
+
+.main__menu.hide-menu .menu__list.buyer ul li.active::after, .main__menu.hide-menu .menu__list.selesman ul li.active::after {
+  background-color: var(--red-400);
+}
+
+.main__menu.hide-menu .menu__list.buyer ul li .count, .main__menu.hide-menu .menu__list.selesman ul li .count {
+  background-color: var(--red-400);
+}
+
+.main__menu.hide-menu .menu__list.home-page ul li.active::after {
+  background-color: var(--gray-900);
+}
+
+.main__menu.hide-menu .menu__list.home-page ul li .count {
+  background-color: var(--gray-900);
+}
+
+.main__menu.hide-menu .menu__list ul li.active {
+  position: relative;
+}
+
+.main__menu.hide-menu .menu__list ul li.active::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 2px;
+  height: 100%;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.main__menu.hide-menu .menu__list ul li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 0px;
+}
+
+.main__menu.hide-menu .menu__list ul li span:not(.count) {
+  max-width: 0px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 3s all;
+  -webkit-transition: 3s all;
+  -moz-transition: 3s all;
+  -ms-transition: 3s all;
+  -o-transition: 3s all;
+}
+
+.main__menu.hide-menu .menu__list ul li .select-arrow {
+  margin-left: 0px;
+}
+
+.main__menu.hide-menu .menu__list ul li .count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  font-size: 0px;
+  margin-left: 0;
+  padding: 0;
+}
+
+.main__menu.hide-menu .menu__list ul .documents__header .select-arrow {
+  display: none;
+}
+
+.main__menu.hide-menu .menu__list ul .documents__list {
+  position: absolute;
+  z-index: 2;
+  left: 110%;
+  top: 0px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--gray-850);
+  -webkit-box-shadow: 1px 4px 40px rgba(54, 94, 125, 0.1);
+          box-shadow: 1px 4px 40px rgba(54, 94, 125, 0.1);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 8px;
+}
+
+.main__menu.hide-menu .menu__list ul .documents__list .documents__list-item {
+  margin: 0;
+  padding: 8px;
+}
+
+.main__menu.hide-menu .menu__list ul .documents__list .documents__list-item.active, .main__menu.hide-menu .menu__list ul .documents__list .documents__list-item:hover {
+  background: var(--gray-100);
+}
+
+.main__menu.hide-menu .menu__list ul .documents__list .documents__list-item.active::before, .main__menu.hide-menu .menu__list ul .documents__list .documents__list-item:hover::before {
+  display: none;
+}
+
+.main__menu .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.main__menu .user .user__photo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 46px;
+  max-width: 46px;
+  height: 46px;
+  color: var(--white);
+  background: #c4cddf;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.main__menu .user .user__photo p {
+  width: 100%;
+}
+
+.main__menu .user .user__photo .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.main__menu .user .user__photo .icon-customer,
+.main__menu .user .user__photo .icon-executor,
+.main__menu .user .user__photo .icon-employer,
+.main__menu .user .user__photo .icon-applicant,
+.main__menu .user .user__photo .icon-buyer,
+.main__menu .user .user__photo .icon-selesman,
+.main__menu .user .user__photo .icon-home-page {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.main__menu .user .user__photo .icon-customer,
+.main__menu .user .user__photo .icon-executor {
+  background-color: var(--blue-500);
+}
+
+.main__menu .user .user__photo .icon-employer,
+.main__menu .user .user__photo .icon-applicant {
+  background-color: var(--orange-600);
+}
+
+.main__menu .user .user__photo .icon-buyer,
+.main__menu .user .user__photo .icon-selesman {
+  background-color: var(--red-300);
+}
+
+.main__menu .user .user__photo .icon-home-page {
+  background-color: var(--blue-1000);
+}
+
+.main__menu .user .user__photo.customer .icon-executor,
+.main__menu .user .user__photo.customer .icon-employer,
+.main__menu .user .user__photo.customer .icon-applicant,
+.main__menu .user .user__photo.customer .icon-buyer,
+.main__menu .user .user__photo.customer .icon-selesman,
+.main__menu .user .user__photo.customer .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.customer .icon-customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.executor .icon-customer,
+.main__menu .user .user__photo.executor .icon-employer,
+.main__menu .user .user__photo.executor .icon-applicant,
+.main__menu .user .user__photo.executor .icon-buyer,
+.main__menu .user .user__photo.executor .icon-selesman,
+.main__menu .user .user__photo.executor .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.executor .icon-executor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.employer .icon-customer,
+.main__menu .user .user__photo.employer .icon-executor,
+.main__menu .user .user__photo.employer .icon-applicant,
+.main__menu .user .user__photo.employer .icon-buyer,
+.main__menu .user .user__photo.employer .icon-selesman,
+.main__menu .user .user__photo.employer .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.employer .icon-employer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.applicant .icon-customer,
+.main__menu .user .user__photo.applicant .icon-executor,
+.main__menu .user .user__photo.applicant .icon-employer,
+.main__menu .user .user__photo.applicant .icon-buyer,
+.main__menu .user .user__photo.applicant .icon-selesman,
+.main__menu .user .user__photo.applicant .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.applicant .icon-applicant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.buyer .icon-customer,
+.main__menu .user .user__photo.buyer .icon-executor,
+.main__menu .user .user__photo.buyer .icon-employer,
+.main__menu .user .user__photo.buyer .icon-applicant,
+.main__menu .user .user__photo.buyer .icon-selesman,
+.main__menu .user .user__photo.buyer .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.buyer .icon-buyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.selesman .icon-customer,
+.main__menu .user .user__photo.selesman .icon-executor,
+.main__menu .user .user__photo.selesman .icon-employer,
+.main__menu .user .user__photo.selesman .icon-applicant,
+.main__menu .user .user__photo.selesman .icon-buyer,
+.main__menu .user .user__photo.selesman .icon-home-page {
+  display: none;
+}
+
+.main__menu .user .user__photo.selesman .icon-selesman {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__photo.home-page .icon-customer,
+.main__menu .user .user__photo.home-page .icon-executor,
+.main__menu .user .user__photo.home-page .icon-employer,
+.main__menu .user .user__photo.home-page .icon-applicant,
+.main__menu .user .user__photo.home-page .icon-buyer,
+.main__menu .user .user__photo.home-page .icon-selesman {
+  display: none;
+}
+
+.main__menu .user .user__photo.home-page .icon-home-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__menu .user .user__info {
+  opacity: 1;
+  width: 100%;
+  transition: 0.1s all;
+  -webkit-transition: 0.1s all;
+  -moz-transition: 0.1s all;
+  -o-transition: 0.1s all;
+  -ms-transition: 0.1s all;
+}
+
+.main__menu .user .user__info .user__info-title {
+  color: var(--gray-850);
+  margin-bottom: 2px;
+}
+
+.main__menu .user .user__info .user__info-select {
+  position: relative;
+}
+
+.main__menu .user .user__info .user__info-select .select__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.main__menu .user .user__info .user__info-select .select__list {
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 10;
+  width: 275px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-150);
+  -webkit-box-shadow: 1px 4px 40px rgba(54, 94, 125, 0.1);
+          box-shadow: 1px 4px 40px rgba(54, 94, 125, 0.1);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+.main__menu .user .user__info .user__info-select .select__list.active {
+  opacity: 1;
+}
+
+.main__menu .user .user__info .user__info-select .select__list.active {
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding: 12px;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item .text-description {
+  color: var(--gray-850);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.select__list-item {
+  border-top: 1px solid transparent;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item + .select__list-item {
+  border-top: 1px solid var(--gray-200);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer .icon, .main__menu .user .user__info .user__info-select .select__list-item.executor .icon, .main__menu .user .user__info .user__info-select .select__list-item.employer .icon, .main__menu .user .user__info .user__info-select .select__list-item.applicant .icon, .main__menu .user .user__info .user__info-select .select__list-item.buyer .icon, .main__menu .user .user__info .user__info-select .select__list-item.selesman .icon, .main__menu .user .user__info .user__info-select .select__list-item.home-page .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover, .main__menu .user .user__info .user__info-select .select__list-item.employer:hover, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover, .main__menu .user .user__info .user__info-select .select__list-item.buyer:hover, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover, .main__menu .user .user__info .user__info-select .select__list-item.home-page:hover {
+  border-radius: 6px;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.employer:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.buyer:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover.select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.home-page:hover.select__list-item {
+  border-top: 1px solid transparent;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.employer:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.buyer:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover + .select__list-item, .main__menu .user .user__info .user__info-select .select__list-item.home-page:hover + .select__list-item {
+  border-top: 1px solid transparent;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.employer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.buyer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.home-page:hover .text-name {
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.executor.active::before, .main__menu .user .user__info .user__info-select .select__list-item.employer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.applicant.active::before, .main__menu .user .user__info .user__info-select .select__list-item.buyer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.selesman.active::before, .main__menu .user .user__info .user__info-select .select__list-item.home-page.active::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 3px;
+  height: 24px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer .icon, .main__menu .user .user__info .user__info-select .select__list-item.executor .icon {
+  background-color: var(--blue-500);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover {
+  background: var(--blue-100);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.executor:hover .text-name {
+  color: var(--blue-600);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.customer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.executor.active::before {
+  background-color: var(--blue-500);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.employer .icon, .main__menu .user .user__info .user__info-select .select__list-item.applicant .icon {
+  background-color: var(--orange-600);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.employer:hover, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover {
+  background: var(--orange-200);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.employer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.applicant:hover .text-name {
+  color: var(--orange-800);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.employer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.applicant.active::before {
+  background-color: var(--orange-700);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.buyer .icon, .main__menu .user .user__info .user__info-select .select__list-item.selesman .icon {
+  background-color: var(--red-300);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.buyer:hover, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover {
+  background: var(--red-100);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.buyer:hover .text-name, .main__menu .user .user__info .user__info-select .select__list-item.selesman:hover .text-name {
+  color: var(--red-400);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.buyer.active::before, .main__menu .user .user__info .user__info-select .select__list-item.selesman.active::before {
+  background-color: var(--red-300);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.home-page .icon {
+  background-color: var(--blue-1000);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.home-page:hover {
+  background: var(--gray-200);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.home-page:hover .text-name {
+  color: var(--gray-1000);
+}
+
+.main__menu .user .user__info .user__info-select .select__list-item.home-page.active::before {
+  background-color: var(--blue-1000);
+}
+
+.main__menu .menu__list {
+  position: relative;
+}
+
+.main__menu .menu__list .hide-menu__btn {
+  position: absolute;
+  top: -5px;
+  right: -32px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1Z' stroke='%23333153' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 7L10 9L12 11M6 1V17V1Z' stroke='%23333153' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.main__menu .menu__list .hide-menu__btn::before {
+  content: "Скрыть";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 120%;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--white);
+  background: var(--gray-850);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  padding: 3px 16px;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s opacity;
+  -webkit-transition: 0.3s opacity;
+  -moz-transition: 0.3s opacity;
+  -ms-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+}
+
+.main__menu .menu__list .hide-menu__btn:hover:before {
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+}
+
+.main__menu .menu__list .hide-menu__btn.hide-menu {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1Z' stroke='%23333153' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 7L13 9L11 11' stroke='%23333153' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 1V17' stroke='%23333153' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.main__menu .menu__list.customer .menu__list-customer {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.customer .menu__list-customer::before {
+  display: none;
+}
+
+.main__menu .menu__list.customer .menu__list-executor,
+.main__menu .menu__list.customer .menu__list-employer,
+.main__menu .menu__list.customer .menu__list-applicant,
+.main__menu .menu__list.customer .menu__list-buyer,
+.main__menu .menu__list.customer .menu__list-selesman,
+.main__menu .menu__list.customer .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.customer ul li.active,
+.main__menu .menu__list.customer ul li:hover {
+  font-weight: 600;
+  color: var(--blue-500);
+}
+
+.main__menu .menu__list.customer ul li.active .svg *,
+.main__menu .menu__list.customer ul li:hover .svg * {
+  stroke: var(--blue-400);
+}
+
+.main__menu .menu__list.customer ul li.active .count,
+.main__menu .menu__list.customer ul li:hover .count {
+  color: var(--white);
+  background-color: var(--blue-400);
+}
+
+.main__menu .menu__list.executor .menu__list-executor {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.executor .menu__list-executor::before {
+  display: none;
+}
+
+.main__menu .menu__list.executor .menu__list-customer,
+.main__menu .menu__list.executor .menu__list-employer,
+.main__menu .menu__list.executor .menu__list-applicant,
+.main__menu .menu__list.executor .menu__list-buyer,
+.main__menu .menu__list.executor .menu__list-selesman,
+.main__menu .menu__list.executor .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.executor ul li.active,
+.main__menu .menu__list.executor ul li:hover {
+  font-weight: 600;
+  color: var(--blue-500);
+}
+
+.main__menu .menu__list.executor ul li.active .svg *,
+.main__menu .menu__list.executor ul li:hover .svg * {
+  stroke: var(--blue-400);
+}
+
+.main__menu .menu__list.executor ul li.active .count,
+.main__menu .menu__list.executor ul li:hover .count {
+  color: var(--white);
+  background-color: var(--blue-400);
+}
+
+.main__menu .menu__list.employer .menu__list-employer {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.employer .menu__list-employer::before {
+  display: none;
+}
+
+.main__menu .menu__list.employer .menu__list-customer,
+.main__menu .menu__list.employer .menu__list-executor,
+.main__menu .menu__list.employer .menu__list-applicant,
+.main__menu .menu__list.employer .menu__list-buyer,
+.main__menu .menu__list.employer .menu__list-selesman,
+.main__menu .menu__list.employer .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.employer ul li.active,
+.main__menu .menu__list.employer ul li:hover {
+  font-weight: 600;
+  color: var(--orange-600);
+}
+
+.main__menu .menu__list.employer ul li.active .svg *,
+.main__menu .menu__list.employer ul li:hover .svg * {
+  stroke: var(--orange-600);
+}
+
+.main__menu .menu__list.employer ul li.active .count,
+.main__menu .menu__list.employer ul li:hover .count {
+  color: var(--white);
+  background-color: var(--orange-600);
+}
+
+.main__menu .menu__list.applicant .menu__list-applicant {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.applicant .menu__list-applicant::before {
+  display: none;
+}
+
+.main__menu .menu__list.applicant .menu__list-customer,
+.main__menu .menu__list.applicant .menu__list-executor,
+.main__menu .menu__list.applicant .menu__list-employer,
+.main__menu .menu__list.applicant .menu__list-buyer,
+.main__menu .menu__list.applicant .menu__list-selesman,
+.main__menu .menu__list.applicant .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.applicant ul li.active,
+.main__menu .menu__list.applicant ul li:hover {
+  color: var(--orange-600);
+}
+
+.main__menu .menu__list.applicant ul li.active .svg *,
+.main__menu .menu__list.applicant ul li:hover .svg * {
+  stroke: var(--orange-600);
+}
+
+.main__menu .menu__list.applicant ul li.active .count,
+.main__menu .menu__list.applicant ul li:hover .count {
+  color: var(--white);
+  background-color: var(--orange-600);
+}
+
+.main__menu .menu__list.buyer .menu__list-buyer {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.buyer .menu__list-buyer::before {
+  display: none;
+}
+
+.main__menu .menu__list.buyer .menu__list-customer,
+.main__menu .menu__list.buyer .menu__list-executor,
+.main__menu .menu__list.buyer .menu__list-employer,
+.main__menu .menu__list.buyer .menu__list-applicant,
+.main__menu .menu__list.buyer .menu__list-selesman,
+.main__menu .menu__list.buyer .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.buyer ul li.active,
+.main__menu .menu__list.buyer ul li:hover {
+  font-weight: 600;
+  color: var(--red-300);
+}
+
+.main__menu .menu__list.buyer ul li.active .svg *,
+.main__menu .menu__list.buyer ul li:hover .svg * {
+  stroke: var(--red-400);
+}
+
+.main__menu .menu__list.buyer ul li.active .count,
+.main__menu .menu__list.buyer ul li:hover .count {
+  color: var(--white);
+  background-color: var(--red-400);
+}
+
+.main__menu .menu__list.selesman .menu__list-selesman {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.selesman .menu__list-selesman::before {
+  display: none;
+}
+
+.main__menu .menu__list.selesman .menu__list-customer,
+.main__menu .menu__list.selesman .menu__list-executor,
+.main__menu .menu__list.selesman .menu__list-employer,
+.main__menu .menu__list.selesman .menu__list-applicant,
+.main__menu .menu__list.selesman .menu__list-buyer,
+.main__menu .menu__list.selesman .menu__list-home-page {
+  display: none;
+}
+
+.main__menu .menu__list.selesman ul li.active,
+.main__menu .menu__list.selesman ul li:hover {
+  font-weight: 600;
+  color: var(--red-300);
+}
+
+.main__menu .menu__list.selesman ul li.active .svg *,
+.main__menu .menu__list.selesman ul li:hover .svg * {
+  stroke: var(--red-400);
+}
+
+.main__menu .menu__list.selesman ul li.active .count,
+.main__menu .menu__list.selesman ul li:hover .count {
+  color: var(--white);
+  background-color: var(--red-400);
+}
+
+.main__menu .menu__list.home-page .menu__list-home-page {
+  display: block;
+  margin-top: 0px;
+}
+
+.main__menu .menu__list.home-page .menu__list-home-page::before {
+  display: none;
+}
+
+.main__menu .menu__list.home-page .menu__list-customer,
+.main__menu .menu__list.home-page .menu__list-executor,
+.main__menu .menu__list.home-page .menu__list-employer,
+.main__menu .menu__list.home-page .menu__list-applicant,
+.main__menu .menu__list.home-page .menu__list-buyer,
+.main__menu .menu__list.home-page .menu__list-selesman {
+  display: none;
+}
+
+.main__menu .menu__list.home-page ul li.active,
+.main__menu .menu__list.home-page ul li:hover {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.main__menu .menu__list.home-page ul li.active .svg *,
+.main__menu .menu__list.home-page ul li:hover .svg * {
+  stroke: var(--gray-900);
+}
+
+.main__menu .menu__list.home-page ul li.active .count,
+.main__menu .menu__list.home-page ul li:hover .count {
+  color: var(--white);
+  background-color: var(--gray-900);
+}
+
+.main__menu .menu__list ul {
+  position: relative;
+  list-style: none;
+  background-color: var(--white);
+  white-space: nowrap;
+}
+
+.main__menu .menu__list ul + ul {
+  margin-top: 20px;
+}
+
+.main__menu .menu__list ul + ul::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  top: -10px;
+  height: 2px;
+  background-color: var(--gray-300);
+}
+
+.main__menu .menu__list ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  height: 44px;
+  color: var(--gray-850);
+  padding: 10px;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  cursor: pointer;
+}
+
+.main__menu .menu__list ul li span:not(.count) {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  opacity: 1;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+.main__menu .menu__list ul li .svg {
+  min-width: 25px !important;
+  min-height: 25px !important;
+}
+
+.main__menu .menu__list ul li .svg * {
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.main__menu .menu__list ul li .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 22px;
+  color: var(--gray-850);
+  background-color: #eef2f4;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  padding: 4px 6px;
+  margin-left: auto;
+  text-align: center;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.main__menu .menu__list ul .documents {
+  position: relative;
+}
+
+.main__menu .menu__list ul .documents[data-open="true"] .documents__header .select-arrow {
+  transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+}
+
+.main__menu .menu__list ul .documents__header .select-arrow {
+  margin-left: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.main__menu .menu__list ul .documents__list {
+  max-height: 0;
+  background: var(--white);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.main__menu .menu__list ul .documents__list.active {
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+}
+
+.main__menu .menu__list ul .documents__list .documents__list-item {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 36px;
+  margin: 0 10px;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.main__menu .menu__list ul .documents__list .documents__list-item.active, .main__menu .menu__list ul .documents__list .documents__list-item:hover {
+  color: var(--orange-800);
+  background: var(--gray-150);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.main__menu .menu__list ul .documents__list .documents__list-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -12px;
+  height: 100%;
+  width: 4px;
+  background-color: var(--orange-600);
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>letter_of_recommendation</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="./components.css">
+   <link rel="stylesheet" href="./variables.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/main__menu.css">
+</head>
+
+<body>
+   <header class="header"></header>
+
+   <main class="main__wrapper">
+      <div class="container">
+         <section class="main__menu">
+            <div class="user">
+               <div class="user__photo text-s16-h22-w600 home-page">
+                  <p>ИИ</p>
+                  <img class="image hide" src="" alt="user">
+
+                  <span class="icon-customer">
+                     <img src="./images/menu/user-icon/customer.svg" alt="icon">
+                  </span>
+                  <span class="icon-executor">
+                     <img src="./images/menu/user-icon/executor.svg" alt="icon">
+                  </span>
+                  <span class="icon-employer">
+                     <img src="./images/menu/user-icon/employer.svg" alt="icon">
+                  </span>
+                  <span class="icon-applicant">
+                     <img src="./images/menu/user-icon/applicant.svg" alt="icon">
+                  </span>
+                  <span class="icon-buyer">
+                     <img src="./images/menu/user-icon/buyer.svg" alt="icon">
+                  </span>
+                  <span class="icon-selesman">
+                     <img src="./images/menu/user-icon/selesman.svg" alt="icon">
+                  </span>
+                  <span class="icon-home-page">
+                     <img src="./images/menu/user-icon/home-page.svg" alt="icon">
+                  </span>
+               </div>
+               <div class="user__info">
+                  <p class="user__info-title">Личный кабинет</p>
+                  <div class="user__info-select">
+                     <div class="select__header text-s20-h24-w500">
+                        <p>Я работодатель</p>
+                        <img src="./images/select-arrow.svg" alt="arrow">
+                     </div>
+                     <div class="select__list text-s16-h22-w500">
+                        <div class="select__list-item home-page" data-value="" data-name="Иванов Иван"
+                           data-class="home-page">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/home-page.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Иванов Иван</span>
+                              <span class="text-description text-s12-h14-w400">Все мои объявления</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item customer" data-value="" data-name="Я заказчик"
+                           data-class="customer">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/customer.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я заказчик</span>
+                              <span class="text-description text-s12-h14-w400">Мои задания</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item executor" data-value="" data-name="Я исполнитель"
+                           data-class="executor">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/executor.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я исполнитель</span>
+                              <span class="text-description text-s12-h14-w400">Моё портфолио</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item employer" data-value="" data-name="Я работодатель"
+                           data-class="employer">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/employer.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я работодатель</span>
+                              <span class="text-description text-s12-h14-w400">Мои вакансии</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item applicant" data-value="" data-name="Я соискатель"
+                           data-class="applicant">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/applicant.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я соискатель</span>
+                              <span class="text-description text-s12-h14-w400">Мои резюме</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item buyer" data-value="" data-name="Я продавец" data-class="buyer">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/buyer.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я продавец</span>
+                              <span class="text-description text-s12-h14-w400">Мои объявления о покупке</span>
+                           </p>
+                        </div>
+                        <div class="select__list-item selesman" data-value="" data-name="Я покупатель"
+                           data-class="selesman">
+                           <span class="icon">
+                              <img src="./images/menu/user-icon/selesman.svg" alt="icon">
+                           </span>
+                           <p class="text">
+                              <span class="text-name">Я покупатель</span>
+                              <span class="text-description text-s12-h14-w400">Мои объявления о продаже</span>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="menu__list text-s14-h20-w400 home-page">
+               <button class="hide-menu__btn"></button>
+               <ul class="menu__list-employer">
+                  <li class="jobs">
+                     <img class="svg" src="./images/menu/menu-icon/vacancy.svg" alt="icon">
+                     <span>Вакансии</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="templates">
+                     <img class="svg" src="./images/menu/menu-icon/templates.svg" alt="icon">
+                     <span>Шаблоны</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="files">
+                     <img class="svg" src="./images/menu/menu-icon/files.svg" alt="icon">
+                     <span>Файлы</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="companies">
+                     <img class="svg" src="./images/menu/menu-icon/companies.svg" alt="icon">
+                     <span>Компании</span>
+                  </li>
+                  <div class="documents">
+                     <li class="documents__header">
+                        <img class="svg" src="./images/menu/menu-icon/documents.svg" alt="icon">
+                        <span>Документы</span>
+                        <img class="select-arrow svg" src="./images/select-arrow.svg" alt="arrow">
+                     </li>
+                     <div class="documents__list text-s14-h20-w500">
+                        <p class="documents__list-item">at-work</p>
+                        <p class="documents__list-item">ProffiTeam</p>
+                        <p class="documents__list-item">Best Union Group</p>
+                     </div>
+                  </div>
+               </ul>
+               <ul class="menu__list-applicant">
+                  <li class="summary">
+                     <img class="svg" src="./images/menu/menu-icon/summary.svg" alt="icon">
+                     <span>Мои резюме</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="responses_and_invitations">
+                     <img class="svg" src="./images/menu/menu-icon/responses_and_invitations.svg" alt="icon">
+                     <span>Отклики и<br>приглашения</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="portfolio">
+                     <img class="svg" src="./images/menu/menu-icon/portfolio.svg" alt="icon">
+                     <span>Портфолио</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul class="menu__list-customer">
+                  <li class="tasks">
+                     <img class="svg" src="./images/menu/menu-icon/tasks.svg" alt="icon">
+                     <span>Мои задания</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="responses_and_invitations">
+                     <img class="svg" src="./images/menu/menu-icon/responses_and_invitations.svg" alt="icon">
+                     <span>Отклики и<br>приглашения</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul class="menu__list-executor">
+                  <li class="portfolio">
+                     <img class="svg" src="./images/menu/menu-icon/my_portfolio.svg" alt="icon">
+                     <span>Моё портфолио</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+                  <li class="responses_and_invitations">
+                     <img class="svg" src="./images/menu/menu-icon/responses_and_invitations.svg" alt="icon">
+                     <span>Отклики и<br>приглашения</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul class="menu__list-buyer">
+                  <li class="announcement_purchase">
+                     <img class="svg" src="./images/menu/menu-icon/announcement_purchase.svg" alt="icon">
+                     <span>Мои объявления о<br>покупке</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul class="menu__list-selesman">
+                  <li class="announcement_sale">
+                     <img class="svg" src="./images/menu/menu-icon/announcement_sale.svg" alt="icon">
+                     <span>Мои объявления о<br>продаже</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul class="menu__list-home-page">
+                  <li class="all_my_ads">
+                     <img class="svg" src="./images/menu/menu-icon/all_my_ads.svg" alt="icon">
+                     <span>Все мои объявления</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
+               </ul>
+               <ul>
+                  <li class="favorites">
+                     <img class="svg" src="./images/menu/menu-icon/favorites.svg" alt="icon">
+                     <span>Избранное</span>
+                  </li>
+                  <li class="archive">
+                     <img class="svg" src="./images/menu/menu-icon/archive.svg" alt="icon">
+                     <span>Архив</span>
+                  </li>
+                  <li class="recall">
+                     <img class="svg" src="./images/menu/menu-icon/recall.svg" alt="icon">
+                     <span>Мои отзывы</span>
+                  </li>
+               </ul>
+               <ul>
+                  <li class="orders">
+                     <img class="svg" src="./images/menu/menu-icon/orders.svg" alt="icon">
+                     <span>Мои заказы</span>
+                  </li>
+                  <li class="wallet">
+                     <img class="svg" src="./images/menu/menu-icon/wallet.svg" alt="icon">
+                     <span>Кошелёк</span>
+                  </li>
+                  <li class="paid_services">
+                     <img class="svg" src="./images/menu/menu-icon/paid_services.svg" alt="icon">
+                     <span>Платные услуги</span>
+                  </li>
+                  <li class="bonuses_and_promocodes">
+                     <img class="svg" src="./images/menu/menu-icon/bonuses_and_promocodes.svg" alt="icon">
+                     <span>Бонусы и промокоды</span>
+                  </li>
+                  <li class="subscriptions">
+                     <img class="svg" src="./images/menu/menu-icon/subscriptions.svg" alt="icon">
+                     <span>Мои подписки</span>
+                  </li>
+                  <li class="calendar">
+                     <img class="svg" src="./images/menu/menu-icon/calendar.svg" alt="icon">
+                     <span>Календарь</span>
+                  </li>
+                  <li class="services">
+                     <img class="svg" src="./images/menu/menu-icon/services.svg" alt="icon">
+                     <span>Мои сервисы</span>
+                  </li>
+               </ul>
+               <ul>
+                  <li class="settings">
+                     <img class="svg" src="./images/menu/menu-icon/settings.svg" alt="icon">
+                     <span>Настройки</span>
+                  </li>
+                  <li class="go_out">
+                     <img class="svg" src="./images/menu/menu-icon/go_out.svg" alt="icon">
+                     <span>Выйти </span>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <section class="main__unit">
+            <div class="block__basic ">
+               <div class="block__basic-title">
+                  <h5 class="text-s28-h36-w500">Файлы</h5>
+                  <div class="button">
+                     <button class="button__my-files active">Мои файлы</button>
+                     <button class="button__my-colleagues">Моих коллег</button>
+                     <span class="slide"></span>
+                  </div>
+                  <button class="create_a_new_letter text-s14-h20-w500">Создать</button>
+               </div>
+               <div class="block__basic-tabs">
+                  <button class="text-s16-h22-w500 ">Предложения о работе</button>
+                  <button class="text-s16-h22-w500 active">Рекомендательные письма</button>
+                  <button class="text-s16-h22-w500 ">Тестовые задания</button>
+                  <button class="text-s16-h22-w500">Анкеты</button>
+                  <span class="slide"></span>
+               </div>
+               <div class="block__basic-no-letters hide">
+                  <img src="images/no-letters-image.svg" alt="images">
+                  <h6 class="text-s24-h32-w500">Пока нет созданных</h6>
+                  <p class="text-s18-h22-w400">Создайте рекомендательное письмо в три шага с помощью нашего супер
+                     удобного конструктора рекомендаций</p>
+                  <button class="create_new_recomendation text-s14-h20-w500">Создать рекомендацию</button>
+               </div>
+               <div class="block__basic-have-letters">
+                  <div class="letters-interection-btn">
+                     <label class="choose-all-letters checkbox-btn">
+                        <input type="checkbox">
+                        <span></span>
+                     </label>
+                     <button class="send-letters text-s12-h14-w400">Отправить</button>
+                     <button class="remove-letters text-s12-h14-w400">Удалить</button>
+                  </div>
+                  <div class="letters-items">
+                     <div class="letters__item" data-value="letter-1">
+                        <div class="letters__item-title">
+                           <label class="letters__item-checkbox checkbox-btn">
+                              <input type="checkbox">
+                              <span></span>
+                           </label>
+                           <p class="name text-s16-h22-w500">Васильев В. В.</p>
+                        </div>
+                        <div class="letters__item-description">
+                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
+                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
+                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
+                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                           <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
+                        </div>
+                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
+                        <div class="letters__item-btn">
+                           <button class="letters__item-send"></button>
+                           <button class="letters__item-edit"></button>
+                           <button class="letters__item-delete"></button>
+                        </div>
+                     </div>
+                     <div class="letters__item" data-value="letter-2">
+                        <div class="letters__item-title">
+                           <label class="letters__item-checkbox checkbox-btn">
+                              <input type="checkbox">
+                              <span></span>
+                           </label>
+                           <p class="name text-s16-h22-w500">Иванов И.И.</p>
+                        </div>
+                        <div class="letters__item-description">
+                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
+                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
+                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
+                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                           <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
+                        </div>
+                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
+                        <div class="letters__item-btn">
+                           <button class="letters__item-send"></button>
+                           <button class="letters__item-edit"></button>
+                           <button class="letters__item-delete"></button>
+                        </div>
+                     </div>
+                     <div class="letters__item" data-value="letter-3">
+                        <div class="letters__item-title">
+                           <label class="letters__item-checkbox checkbox-btn">
+                              <input type="checkbox">
+                              <span></span>
+                           </label>
+                           <p class="name text-s16-h22-w500">Петров П.П.</p>
+                        </div>
+                        <div class="letters__item-description">
+                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
+                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
+                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
+                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                           <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
+                        </div>
+                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
+                        <div class="letters__item-btn">
+                           <button class="letters__item-send"></button>
+                           <button class="letters__item-edit"></button>
+                           <button class="letters__item-delete"></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="block__create hide">
+               <div class="block__create-title">
+                  <button class="cancel_create_letters"></button>
+                  <h5 class="text-s28-h36-w500">Новое рекомендательное письмо</h5>
+                  <button class="open_preview">
+                     <img src="./images/open-preview-icon.svg" alt="icon">
+                     <span class="text-s14-h20-w500">Открыть предпросмотр</span>
+                  </button>
+               </div>
+               <form class="block__create-form text-s14-h20-w40">
+                  <div class="city">
+                     <h6 class="text-s14-h20-w400">Место работы</h6>
+                     <input type="text" maxlength="40" placeholder="город" name="city" required>
+                  </div>
+                  <div class="recommended">
+                     <h6 class="text-s14-h20-w400">Рекомендуемый</h6>
+                     <input type="text" maxlength="60" placeholder="имя, отчество, фамилия" name="recommended" required>
+                  </div>
+                  <div class="position">
+                     <h6 class="text-s14-h20-w400">Работал (а) под моим руководством в качестве</h6>
+                     <input type="text" maxlength="60" placeholder="название должности" name="position" required>
+                  </div>
+                  <div class="period">
+                     <span>с</span>
+                     <span>до</span>
+                  </div>
+                  <div class="responsibilities textarea">
+                     <h6 class="text-s14-h20-w400">В его (ее) обязанности входили:</h6>
+                     <textarea maxlength="1800" name="responsibilities" required></textarea>
+                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                  </div>
+                  <div class="achievements textarea">
+                     <h6 class="text-s14-h20-w400">В течение всего периода работы в нашей организации проявил (проявила)
+                        себя:</h6>
+                     <textarea maxlength="1800" name="achievements" required></textarea>
+                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                  </div>
+                  <div class="characteristic textarea">
+                     <h6 class="text-s14-h20-w400">В общем, рекомендуемого можно охарактеризовать как:</h6>
+                     <textarea maxlength="1800" name="characteristic" required></textarea>
+                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                  </div>
+                  <div class="quality textarea">
+                     <h6 class="text-s14-h20-w400">Я считаю, что он (она) обладает качествами:</h6>
+                     <textarea maxlength="1800" name="quality" required></textarea>
+                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                  </div>
+                  <div class="recommendations select-radio text-s14-h20-w400">
+                     <div class="recommendations__select">
+                        <p class="select__header" data-value="безоговорочно рекомендую">безоговорочно
+                           рекомендую</p>
+                        <div class="select__list">
+                           <label class="item">
+                              <input type="radio" name="recommendations" value="безоговорочно рекомендую" checked>
+                              <p>безоговорочно рекомендую</p>
+                           </label>
+                           <label class="item">
+                              <input type="radio" name="recommendations" value="рекомендую с некоторыми оговорками">
+                              <p>рекомендую с некоторыми
+                                 оговорками</p>
+                           </label>
+                           <label class="item">
+                              <input type="radio" name="recommendations" value="рекомендую с трудом">
+                              <p>рекомендую с трудом</p>
+                           </label>
+                           <label class="item">
+                              <input type="radio" name="recommendations" value="не рекомендую">
+                              <p>не рекомендую</p>
+                           </label>
+                        </div>
+                     </div>
+                     <h6 class="text-s14-h20-w400">его (ее) на перечисленные им (ей) должности или профессии.</h6>
+                  </div>
+                  <div class="phone">
+                     <h6 class="text-s14-h20-w400">При необходимости уточнить детали можно позвонить мне по телефону
+                     </h6>
+                     <input type="tel" name="phone" placeholder="+">
+                  </div>
+               </form>
+
+               <div class="block__create-preview text-s14-h20-w400 ">
+                  <div class="title">
+                     <h5 class="text-s22-h28-w500">Рекомендательное письмо</h5>
+                     <p class="text-s16-h22-w400">Reference letter</p>
+                  </div>
+                  <div class="title-block">
+                     <div class="city">
+                        <p>г.</p>
+                        <span></span>
+                     </div>
+                     <div class="now__date">
+                        <span class="day">8</span>
+                        <span class="month">июль</span>
+                        <span>20</span>
+                        <span class="year">22</span>
+                        <span>г.</span>
+                     </div>
+                  </div>
+                  <div class="block-1">
+                     <h6 class="text-s16-h22-w500">Подтверждение факта работы в вашей компании с рекомендуемым</h6>
+                     <div class="recommended">
+                        <p><span></span> работал (а) под моим руководством в качестве</p>
+                     </div>
+                     <div class="position">
+                        <span></span>
+                     </div>
+                     <div class="responsibilities">
+                        В его (ее) обязанности входили:
+                        <span></span>
+                     </div>
+                  </div>
+                  <div class="block-2">
+                     <h6 class="text-s16-h22-w500">Краткая характеристика профессиональных качеств рекомендуемого</h6>
+                     <div class="achievements">
+                        В течение всего периода работы в нашей организации проявил (проявила) себя:
+                        <span></span>
+                     </div>
+                  </div>
+                  <div class="block-3">
+                     <h6 class="text-s16-h22-w500">Краткая характеристика личностных качеств рекомендуемого</h6>
+                     <div class="recommended">
+                        <p>В общем, <span></span> можно охарактеризовать как</p>
+                     </div>
+                     <div class="characteristic">
+                        <span></span>
+                     </div>
+                  </div>
+                  <div class="block-4">
+                     <h6 class="text-s16-h22-w500">Рекомендация</h6>
+                     <div class="quality">
+                        Я считаю, что он (она) обладает качествами:
+                        <span></span>
+                     </div>
+                     <div class="recommendations">
+                        <p>Я <span></span> его (ее) на перечисленные им (ей) должности или профессии.</p>
+                     </div>
+                     <div class="phone" data-type="tel">
+                        <p>При необходимости уточнить детали можно позвонить мне по телефону <span></span></p>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
+
+   <div class="popup ">
+      <!-- если некому отправить, то добавить класс "no-employees"-->
+      <div class="popup__send-recomendation ">
+         <div class="have-employees__block">
+            <h5 class="text-s24-h32-w500">Отправить рекомендацию</h5>
+            <div class="input">
+               <input type="text" maxlength="60" placeholder="Начните вводить имя или фамилию" required>
+            </div>
+            <div class="items">
+               <label class="item radio-btn">
+                  <input type="radio" name="send-recomendation">
+                  <span></span>
+                  <p class="text-s16-h22-w400">Александров Дмитрий</p>
+               </label>
+               <label class="item radio-btn">
+                  <input type="radio" name="send-recomendation">
+                  <span></span>
+                  <p class="text-s16-h22-w400">Васильева Елена</p>
+               </label>
+            </div>
+            <div class="button">
+               <button class="cancel-btn text-s14-h20-w500">Отмена</button>
+               <button class="send-btn text-s14-h20-w500">Отправить</button>
+            </div>
+         </div>
+         <div class="no-employees__block">
+            <img src="./images/no-employees-image.svg" alt="image">
+            <h5 class="text-s24-h32-w500">Отправить некому</h5>
+            <p class="text-s14-h20-w400">В компании ещё нет других сотрудников</p>
+            <button class="add-employee text-s14-h20-w500">Добавить сотрудника</button>
+         </div>
+         <button class="close-popup"></button>
+      </div>
+   </div>
+
+   <template id="document-fragment">
+      <!-- шаблон для добавленного рекомендательного письма -->
+      <div class="letters__item" id="letters__item" data-value="letter-1">
+         <div class="letters__item-title">
+            <label class="letters__item-checkbox checkbox-btn">
+               <input type="checkbox">
+               <span></span>
+            </label>
+            <p class="name text-s16-h22-w500">Васильев В. В.</p>
+         </div>
+         <div class="letters__item-description">
+            <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+               aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
+               atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
+               ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
+               perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+            <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
+         </div>
+         <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
+         <div class="letters__item-btn">
+            <button class="letters__item-send"></button>
+            <button class="letters__item-edit"></button>
+            <button class="letters__item-delete"></button>
+         </div>
+      </div>
+      <!-- шаблон для пользователя в попапе отправить рекомендацию -->
+      <label class="item radio-btn" id="send__recomendation-user">
+         <input type="radio" name="send-recomendation">
+         <span></span>
+         <p class="text-s16-h22-w400">Александров Дмитрий</p>
+      </label>
+   </template>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
