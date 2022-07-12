@@ -10,6 +10,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
    <link rel="stylesheet" href="./components.css">
    <link rel="stylesheet" href="./variables.css">
    <link rel="stylesheet" href="css/style.css">
@@ -18,6 +20,7 @@
 
 <body>
    <header class="header"></header>
+
 
    <main class="main__wrapper">
       <div class="container">
@@ -236,6 +239,11 @@
                      <img class="svg" src="./images/menu/menu-icon/archive.svg" alt="icon">
                      <span>Архив</span>
                   </li>
+                  <li class="notifications">
+                     <img class="svg" src="./images/menu/menu-icon/notifications.svg" alt="icon">
+                     <span>Уведомления</span>
+                     <span class="count text-s12-h14-w500">3</span>
+                  </li>
                   <li class="recall">
                      <img class="svg" src="./images/menu/menu-icon/recall.svg" alt="icon">
                      <span>Мои отзывы</span>
@@ -285,6 +293,7 @@
          </section>
 
          <section class="main__unit">
+            <!-- если нет сохранённых писем то добавить класс "no-letter" -->
             <div class="block__basic ">
                <div class="block__basic-title">
                   <h5 class="text-s28-h36-w500">Файлы</h5>
@@ -302,12 +311,12 @@
                   <button class="text-s16-h22-w500">Анкеты</button>
                   <span class="slide"></span>
                </div>
-               <div class="block__basic-no-letters hide">
+               <div class="block__basic-no-letters">
                   <img src="images/no-letters-image.svg" alt="images">
                   <h6 class="text-s24-h32-w500">Пока нет созданных</h6>
                   <p class="text-s18-h22-w400">Создайте рекомендательное письмо в три шага с помощью нашего супер
                      удобного конструктора рекомендаций</p>
-                  <button class="create_new_recomendation text-s14-h20-w500">Создать рекомендацию</button>
+                  <button class="create_a_new_letter text-s14-h20-w500">Создать рекомендацию</button>
                </div>
                <div class="block__basic-have-letters">
                   <div class="letters-interection-btn">
@@ -319,157 +328,294 @@
                      <button class="remove-letters text-s12-h14-w400">Удалить</button>
                   </div>
                   <div class="letters-items">
-                     <div class="letters__item" data-value="letter-1">
-                        <div class="letters__item-title">
-                           <label class="letters__item-checkbox checkbox-btn">
+                     <div class="letter__item" data-id="1" data-recommendations="не рекомендую"
+                        data-create__letter="29.6.2020" data-city="Санкт-Петербург"
+                        data-recommended="Петров Пётр Петрович" data-position="Машинист электровоза"
+                        data-period__from="05.04.1990" data-period__to="01.07.2022"
+                        data-responsibilities="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason."
+                        data-achievements="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-characteristic="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-quality="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-phone="+7(000)000-00-00">
+                        <div class="letter__item-title">
+                           <label class="letter__item-checkbox checkbox-btn">
                               <input type="checkbox">
                               <span></span>
                            </label>
-                           <p class="name text-s16-h22-w500">Васильев В. В.</p>
+                           <p class="name text-s16-h22-w500">Петров Пётр Петрович</p>
                         </div>
-                        <div class="letters__item-description">
-                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
-                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
-                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
-                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                        <div class="letter__item-description">
+                           <p class="text-s14-h20-w400">Wes Bos is a Full Stack Developer, Speaker and Teacher from
+                              Canada. He is a course creator, works as an independent web developer and is the co-host
+                              of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+
+                              classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the
+                              third person for some reason.
+
+                              Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and
+                              Learn Node which together have sold over 55,000 copies. He is also the author of
+                              JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video
+                              series. 300,000 people have taken at least one of Wes' free video courses.</p>
                            <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
                         </div>
-                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
-                        <div class="letters__item-btn">
-                           <button class="letters__item-send"></button>
-                           <button class="letters__item-edit"></button>
-                           <button class="letters__item-delete"></button>
+                        <p class="letter__item-create-date text-s12-h14-w400">29 июня 2020</p>
+                        <div class="letter__item-btn">
+                           <button class="letter__item-send"></button>
+                           <button class="letter__item-edit"></button>
+                           <button class="letter__item-delete"></button>
                         </div>
                      </div>
-                     <div class="letters__item" data-value="letter-2">
-                        <div class="letters__item-title">
-                           <label class="letters__item-checkbox checkbox-btn">
+                     <div class="letter__item" data-id="2" data-recommendations="не рекомендую"
+                        data-create__letter="1.7.2022" data-city="Санкт-Петербург"
+                        data-recommended="Иванов Иван Иванович" data-position="Машинист электровоза"
+                        data-period__from="05.04.1990" data-period__to="01.07.2022"
+                        data-responsibilities="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-achievements="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-characteristic="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason."
+                        data-quality="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason.
+                     
+                     Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-phone="+7(000)000-00-00">
+                        <div class="letter__item-title">
+                           <label class="letter__item-checkbox checkbox-btn">
                               <input type="checkbox">
                               <span></span>
                            </label>
-                           <p class="name text-s16-h22-w500">Иванов И.И.</p>
+                           <p class="name text-s16-h22-w500">Иванов Иван Иванович</p>
                         </div>
-                        <div class="letters__item-description">
-                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
-                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
-                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
-                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                        <div class="letter__item-description">
+                           <p class="text-s14-h20-w400">Wes Bos is a Full Stack Developer, Speaker and Teacher from
+                              Canada. He is a course creator, works as an independent web developer and is the co-host
+                              of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+
+                              classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the
+                              third person for some reason.
+
+                              Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and
+                              Learn Node which together have sold over 55,000 copies. He is also the author of
+                              JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video
+                              series. 300,000 people have taken at least one of Wes' free video courses.</p>
                            <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
                         </div>
-                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
-                        <div class="letters__item-btn">
-                           <button class="letters__item-send"></button>
-                           <button class="letters__item-edit"></button>
-                           <button class="letters__item-delete"></button>
+                        <p class="letter__item-create-date text-s12-h14-w400">1 июля 2022</p>
+                        <div class="letter__item-btn">
+                           <button class="letter__item-send"></button>
+                           <button class="letter__item-edit"></button>
+                           <button class="letter__item-delete"></button>
                         </div>
                      </div>
-                     <div class="letters__item" data-value="letter-3">
-                        <div class="letters__item-title">
-                           <label class="letters__item-checkbox checkbox-btn">
+                     <div class="letter__item" data-id="3" data-recommendations="не рекомендую"
+                        data-create__letter="8.3.2021" data-city="Санкт-Петербург"
+                        data-recommended="Сидоров Виктор Викторович" data-position="Машинист электровоза"
+                        data-period__from="05.04.1990" data-period__to="01.07.2022"
+                        data-responsibilities="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia magnam ad exercitationem numquam deleniti, doloribus obcaecati eos, vero neque explicabo rerum in at tempora, architecto soluta aliquid natus cumque quisquam praesentium id libero placeat. Facere, facilis possimus ut quibusdam, quas error quasi assumenda suscipit consequuntur maiores iure, placeat eligendi."
+                        data-achievements="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia magnam ad exercitationem numquam deleniti, doloribus obcaecati eos, vero neque explicabo rerum in at tempora, architecto soluta aliquid natus cumque quisquam praesentium id libero placeat. Facere, facilis possimus ut quibusdam, quas error quasi assumenda suscipit consequuntur maiores iure, placeat eligendi."
+                        data-characteristic="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia magnam ad exercitationem numquam deleniti, doloribus obcaecati eos, vero neque explicabo rerum in at tempora, architecto soluta aliquid natus cumque quisquam praesentium id libero placeat. Facere, facilis possimus ut quibusdam, quas error quasi assumenda suscipit consequuntur maiores iure, placeat eligendi."
+                        data-quality="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia magnam ad exercitationem numquam deleniti, doloribus obcaecati eos, vero neque explicabo rerum in at tempora, architecto soluta aliquid natus cumque quisquam praesentium id libero placeat. Facere, facilis possimus ut quibusdam, quas error quasi assumenda suscipit consequuntur maiores iure, placeat eligendi."
+                        data-phone="+7(000)000-00-00">
+                        <div class="letter__item-title">
+                           <label class="letter__item-checkbox checkbox-btn">
                               <input type="checkbox">
                               <span></span>
                            </label>
-                           <p class="name text-s16-h22-w500">Петров П.П.</p>
+                           <p class="name text-s16-h22-w500">Сидоров Виктор Викторович</p>
                         </div>
-                        <div class="letters__item-description">
-                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                              aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
-                              atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
-                              ab quisquam maiores natus odio temporibus minima, hic, eligendi iure quasi repudiandae
-                              perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
+                        <div class="letter__item-description">
+                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                              mollitia magnam ad exercitationem numquam deleniti, doloribus obcaecati eos, vero neque
+                              explicabo rerum in at tempora, architecto soluta aliquid natus cumque quisquam praesentium
+                              id libero placeat. Facere, facilis possimus ut quibusdam, quas error quasi assumenda
+                              suscipit consequuntur maiores iure, placeat eligendi.</p>
                            <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
                         </div>
-                        <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
-                        <div class="letters__item-btn">
-                           <button class="letters__item-send"></button>
-                           <button class="letters__item-edit"></button>
-                           <button class="letters__item-delete"></button>
+                        <p class="letter__item-create-date text-s12-h14-w400">8 марта 2021</p>
+                        <div class="letter__item-btn">
+                           <button class="letter__item-send"></button>
+                           <button class="letter__item-edit"></button>
+                           <button class="letter__item-delete"></button>
+                        </div>
+                     </div>
+                     <div class="letter__item" data-id="4" data-recommendations="не рекомендую"
+                        data-create__letter="9.1.2019" data-city="Санкт-Петербург"
+                        data-recommended="Константинов Константин Константинович" data-position="Машинист электровоза"
+                        data-period__from="05.04.1990" data-period__to="01.07.2022"
+                        data-responsibilities="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason. Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-achievements="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason. Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-characteristic="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason. Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-quality="Wes Bos is a Full Stack Developer, Speaker and Teacher from Canada. He is a course creator, works as an independent web developer and is the co-host of Syntax - a popular web development podcast. Wes has taught over 500 students in 200+ classes and spoken at dozens of conferences around the world. Wes wrote his own bio in the third person for some reason. Wes is the author of React For Beginners, Advanced React and GraphQL, ES6 for Everyone and Learn Node which together have sold over 55,000 copies. He is also the author of JavaScript30.com, CSSGrid.io, Flexbox.io and Command Line Power User, a set of free video series. 300,000 people have taken at least one of Wes' free video courses."
+                        data-phone="+7(000)000-00-00">
+                        <div class="letter__item-title">
+                           <label class="letter__item-checkbox checkbox-btn">
+                              <input type="checkbox">
+                              <span></span>
+                           </label>
+                           <p class="name text-s16-h22-w500">Константинов Константин Константинович</p>
+                        </div>
+                        <div class="letter__item-description">
+                           <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                              Numquam, explicabo.</p>
+                           <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
+                        </div>
+                        <p class="letter__item-create-date text-s12-h14-w400">9 января 2019</p>
+                        <div class="letter__item-btn">
+                           <button class="letter__item-send"></button>
+                           <button class="letter__item-edit"></button>
+                           <button class="letter__item-delete"></button>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
+
             <div class="block__create hide">
                <div class="block__create-title">
-                  <button class="cancel_create_letters"></button>
-                  <h5 class="text-s28-h36-w500">Новое рекомендательное письмо</h5>
-                  <button class="open_preview">
-                     <img src="./images/open-preview-icon.svg" alt="icon">
-                     <span class="text-s14-h20-w500">Открыть предпросмотр</span>
-                  </button>
+                  <div class="create__title">
+                     <button class="cancel_create_letters"></button>
+                     <h5 class="text-s28-h36-w500">Новое рекомендательное письмо</h5>
+                     <button class="open_preview">
+                        <img src="./images/open-preview-icon.svg" alt="icon">
+                        <span class="text-s14-h20-w500">Открыть предпросмотр</span>
+                     </button>
+                  </div>
+
+                  <div class="preview__title">
+                     <button class="hide_preview"></button>
+                     <h5 class="text-s28-h36-w500">Фамилия Имя Отчество</h5>
+                  </div>
                </div>
-               <form class="block__create-form text-s14-h20-w40">
-                  <div class="city">
-                     <h6 class="text-s14-h20-w400">Место работы</h6>
-                     <input type="text" maxlength="40" placeholder="город" name="city" required>
-                  </div>
-                  <div class="recommended">
-                     <h6 class="text-s14-h20-w400">Рекомендуемый</h6>
-                     <input type="text" maxlength="60" placeholder="имя, отчество, фамилия" name="recommended" required>
-                  </div>
-                  <div class="position">
-                     <h6 class="text-s14-h20-w400">Работал (а) под моим руководством в качестве</h6>
-                     <input type="text" maxlength="60" placeholder="название должности" name="position" required>
-                  </div>
-                  <div class="period">
-                     <span>с</span>
-                     <span>до</span>
-                  </div>
-                  <div class="responsibilities textarea">
-                     <h6 class="text-s14-h20-w400">В его (ее) обязанности входили:</h6>
-                     <textarea maxlength="1800" name="responsibilities" required></textarea>
-                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
-                  </div>
-                  <div class="achievements textarea">
-                     <h6 class="text-s14-h20-w400">В течение всего периода работы в нашей организации проявил (проявила)
-                        себя:</h6>
-                     <textarea maxlength="1800" name="achievements" required></textarea>
-                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
-                  </div>
-                  <div class="characteristic textarea">
-                     <h6 class="text-s14-h20-w400">В общем, рекомендуемого можно охарактеризовать как:</h6>
-                     <textarea maxlength="1800" name="characteristic" required></textarea>
-                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
-                  </div>
-                  <div class="quality textarea">
-                     <h6 class="text-s14-h20-w400">Я считаю, что он (она) обладает качествами:</h6>
-                     <textarea maxlength="1800" name="quality" required></textarea>
-                     <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
-                  </div>
-                  <div class="recommendations select-radio text-s14-h20-w400">
-                     <div class="recommendations__select">
-                        <p class="select__header" data-value="безоговорочно рекомендую">безоговорочно
-                           рекомендую</p>
-                        <div class="select__list">
-                           <label class="item">
-                              <input type="radio" name="recommendations" value="безоговорочно рекомендую" checked>
-                              <p>безоговорочно рекомендую</p>
-                           </label>
-                           <label class="item">
-                              <input type="radio" name="recommendations" value="рекомендую с некоторыми оговорками">
-                              <p>рекомендую с некоторыми
-                                 оговорками</p>
-                           </label>
-                           <label class="item">
-                              <input type="radio" name="recommendations" value="рекомендую с трудом">
-                              <p>рекомендую с трудом</p>
-                           </label>
-                           <label class="item">
-                              <input type="radio" name="recommendations" value="не рекомендую">
-                              <p>не рекомендую</p>
-                           </label>
+
+               <div class="block__create-inner">
+                  <form class="block__create-form text-s14-h20-w40">
+                     <div class="section-step step-1 " data-value="1">
+                        <div class="city">
+                           <h6 class="text-s14-h20-w400">Место работы</h6>
+                           <input type="text" maxlength="40" placeholder="город" name="city" autocomplete="off"
+                              required>
+                        </div>
+                        <div class="recommended">
+                           <h6 class="text-s14-h20-w400">Рекомендуемый</h6>
+                           <input type="text" maxlength="60" placeholder="имя, отчество, фамилия" name="recommended"
+                              autocomplete="off" required>
+                        </div>
+                        <div class="position">
+                           <h6 class="text-s14-h20-w400">Работал (а) под моим руководством в качестве</h6>
+                           <input type="text" maxlength="60" placeholder="название должности" name="position"
+                              autocomplete="off" required>
+                        </div>
+                        <div class="period">
+                           <span>с</span>
+                           <div class="period__inner">
+                              <input type="text" class="period__from" name="period__from" placeholder="28 октября 2022"
+                                 autocomplete="off" required>
+                           </div>
+                           <span>до</span>
+                           <div class="period__inner">
+                              <input type="text" class="period__to" name="period__to" placeholder="28 октября 2022"
+                                 autocomplete="off" required>
+                           </div>
+                        </div>
+                        <div class="responsibilities textarea">
+                           <h6 class="text-s14-h20-w400">В его (ее) обязанности входили:</h6>
+                           <textarea maxlength="1800" name="responsibilities" required></textarea>
+                           <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                        </div>
+                        <div class="button">
+                           <button class="next text-s14-h20-w500">Далее</button>
                         </div>
                      </div>
-                     <h6 class="text-s14-h20-w400">его (ее) на перечисленные им (ей) должности или профессии.</h6>
+
+                     <div class="section-step step-2 hide" data-value="2">
+                        <div class="achievements textarea">
+                           <h6 class="text-s14-h20-w400">В течение всего периода работы в нашей организации проявил
+                              (проявила)
+                              себя:</h6>
+                           <textarea maxlength="1800" name="achievements" required></textarea>
+                           <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                        </div>
+                        <div class="characteristic textarea">
+                           <h6 class="text-s14-h20-w400">В общем, рекомендуемого можно охарактеризовать как:</h6>
+                           <textarea maxlength="1800" name="characteristic" required></textarea>
+                           <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                        </div>
+                        <div class="button">
+                           <button class="back text-s14-h20-w500">Назад</button>
+                           <button class="next text-s14-h20-w500">Далее</button>
+                        </div>
+                     </div>
+
+                     <div class="section-step step-3 hide" data-value="3">
+                        <div class="quality textarea">
+                           <h6 class="text-s14-h20-w400">Я считаю, что он (она) обладает качествами:</h6>
+                           <textarea maxlength="1800" name="quality" required></textarea>
+                           <p class="length text-s12-h14-w400">Символов: <span>0</span> из 1800</p>
+                        </div>
+                        <div class="recommendations select-radio text-s14-h20-w400">
+                           <div class="recommendations__select">
+                              <!-- <input type="text" class="hide" name="recommendations"> -->
+                              <p class="select__header" data-value="безоговорочно рекомендую">безоговорочно
+                                 рекомендую</p>
+                              <div class="select__list">
+                                 <label class="item">
+                                    <input type="radio" name="recommendations" value="безоговорочно рекомендую" checked>
+                                    <p>безоговорочно рекомендую</p>
+                                 </label>
+                                 <label class="item">
+                                    <input type="radio" name="recommendations"
+                                       value="рекомендую с некоторыми оговорками">
+                                    <p>рекомендую с некоторыми
+                                       оговорками</p>
+                                 </label>
+                                 <label class="item">
+                                    <input type="radio" name="recommendations" value="рекомендую с трудом">
+                                    <p>рекомендую с трудом</p>
+                                 </label>
+                                 <label class="item">
+                                    <input type="radio" name="recommendations" value="не рекомендую">
+                                    <p>не рекомендую</p>
+                                 </label>
+                              </div>
+                           </div>
+                           <h6 class="text-s14-h20-w400">его (ее) на перечисленные им (ей) должности или профессии.</h6>
+                        </div>
+                        <div class="phone">
+                           <h6 class="text-s14-h20-w400">При необходимости уточнить детали можно позвонить мне по
+                              телефону
+                           </h6>
+                           <input type="tel" name="phone" placeholder="+" autocomplete="off">
+                        </div>
+                        <div class="button">
+                           <button class="back text-s14-h20-w500">Назад</button>
+                           <div class="button__inner">
+                              <button class="save text-s14-h20-w500">Сохранить в мои файлы</button>
+                              <button class="send text-s14-h20-w500">Отправить</button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+
+                  <div class="step">
+                     <div class="step__value now" data-value="1">
+                        <div class="number">
+                        </div>
+                        <p class="text text-s14-h20-w400">Подтверждение факта работы</p>
+                     </div>
+                     <div class="step__value" data-value="2">
+                        <div class="number">
+                        </div>
+                        <p class="text text-s14-h20-w400">Качества рекомендуемого</p>
+                     </div>
+                     <div class="step__value" data-value="3">
+                        <div class="number">
+                        </div>
+                        <p class="text text-s14-h20-w400">Рекомендация и контакты</p>
+                     </div>
                   </div>
-                  <div class="phone">
-                     <h6 class="text-s14-h20-w400">При необходимости уточнить детали можно позвонить мне по телефону
-                     </h6>
-                     <input type="tel" name="phone" placeholder="+">
-                  </div>
-               </form>
+               </div>
 
                <div class="block__create-preview text-s14-h20-w400 ">
                   <div class="title">
@@ -477,11 +623,10 @@
                      <p class="text-s16-h22-w400">Reference letter</p>
                   </div>
                   <div class="title-block">
-                     <div class="city">
-                        <p>г.</p>
-                        <span></span>
+                     <div class="city focus" data-focus="city" data-step="1">
+                        <p>г. <span></span></p>
                      </div>
-                     <div class="now__date">
+                     <div class="create__date">
                         <span class="day">8</span>
                         <span class="month">июль</span>
                         <span>20</span>
@@ -491,76 +636,120 @@
                   </div>
                   <div class="block-1">
                      <h6 class="text-s16-h22-w500">Подтверждение факта работы в вашей компании с рекомендуемым</h6>
-                     <div class="recommended">
+                     <div class="recommended focus" data-focus="recommended" data-step="1">
                         <p><span></span> работал (а) под моим руководством в качестве</p>
                      </div>
-                     <div class="position">
+                     <div class="position focus" data-focus="position" data-step="1">
                         <span></span>
                      </div>
-                     <div class="responsibilities">
+                     <div class="period ">
+                        <p class="period__from focus" data-focus="period__from" data-step="1">с <span></span> г.</p>
+                        <p class="period__to focus" data-focus="period__to" data-step="1">до <span></span> г.</p>
+                     </div>
+                     <div class="responsibilities focus" data-type="textarea" data-focus="responsibilities"
+                        data-step="1">
                         В его (ее) обязанности входили:
-                        <span></span>
+                        <div class="textarea__inner">
+                           <textarea readonly></textarea>
+                        </div>
                      </div>
                   </div>
                   <div class="block-2">
                      <h6 class="text-s16-h22-w500">Краткая характеристика профессиональных качеств рекомендуемого</h6>
-                     <div class="achievements">
+                     <div class="achievements focus" data-type="textarea" data-focus="achievements" data-step="2">
                         В течение всего периода работы в нашей организации проявил (проявила) себя:
-                        <span></span>
+                        <div class="textarea__inner">
+                           <textarea readonly></textarea>
+                        </div>
                      </div>
                   </div>
                   <div class="block-3">
                      <h6 class="text-s16-h22-w500">Краткая характеристика личностных качеств рекомендуемого</h6>
-                     <div class="recommended">
+                     <div class="recommended focus" data-focus="recommended" data-step="1">
                         <p>В общем, <span></span> можно охарактеризовать как</p>
                      </div>
-                     <div class="characteristic">
-                        <span></span>
+                     <div class="characteristic focus" data-type="textarea" data-focus="characteristic" data-step="2">
+                        <div class="textarea__inner">
+                           <textarea readonly></textarea>
+                        </div>
                      </div>
                   </div>
                   <div class="block-4">
                      <h6 class="text-s16-h22-w500">Рекомендация</h6>
-                     <div class="quality">
+                     <div class="quality focus" data-type="textarea" data-focus="quality" data-step="3">
                         Я считаю, что он (она) обладает качествами:
-                        <span></span>
+                        <div class="textarea__inner">
+                           <textarea readonly></textarea>
+                        </div>
                      </div>
-                     <div class="recommendations">
+                     <div class="recommendations focus" data-focus="recommendations" data-step="3">
                         <p>Я <span></span> его (ее) на перечисленные им (ей) должности или профессии.</p>
                      </div>
-                     <div class="phone" data-type="tel">
+                     <div class="phone focus" data-type="tel" data-focus="phone" data-step="3">
                         <p>При необходимости уточнить детали можно позвонить мне по телефону <span></span></p>
                      </div>
+                     <p class="description text-s12-h14-w400">Изложенная информация является конфиденциальной и не
+                        подлежит разглашению</p>
                   </div>
-
                </div>
             </div>
          </section>
       </div>
    </main>
 
+   <!-- попапы -->
    <div class="popup ">
-      <!-- если некому отправить, то добавить класс "no-employees"-->
+      <!-- попап отправки письма (если некому отправить, то добавить класс "no-employees") -->
       <div class="popup__send-recomendation ">
          <div class="have-employees__block">
             <h5 class="text-s24-h32-w500">Отправить рекомендацию</h5>
-            <div class="input">
-               <input type="text" maxlength="60" placeholder="Начните вводить имя или фамилию" required>
-            </div>
             <div class="items">
                <label class="item radio-btn">
                   <input type="radio" name="send-recomendation">
                   <span></span>
-                  <p class="text-s16-h22-w400">Александров Дмитрий</p>
+                  <div class="item__inner">
+                     <div class="item__inner-image">
+                        <p class="placeholder hide">АД</p>
+                        <img class="image " src="https://cdn.nur.kz/images/1120x630/pogudx73hjs5dci1q.jpeg" alt="user">
+                     </div>
+                     <div class="item__inner-text">
+                        <p class="text-s16-h22-w500">Александров Дмитрий</p>
+                        <p class="text-s12-h14-w500">Костюмер</p>
+                     </div>
+                  </div>
                </label>
                <label class="item radio-btn">
                   <input type="radio" name="send-recomendation">
                   <span></span>
-                  <p class="text-s16-h22-w400">Васильева Елена</p>
+                  <div class="item__inner">
+                     <div class="item__inner-image">
+                        <p class="placeholder hide">ИИ</p>
+                        <img class="image " src="https://cdn.nur.kz/images/1120x630/pogudx73hjs5dci1q.jpeg" alt="user">
+                     </div>
+                     <div class="item__inner-text">
+                        <p class="text-s16-h22-w500">Иванов Иван</p>
+                        <p class="text-s12-h14-w500">Менеджер</p>
+                     </div>
+                  </div>
+               </label>
+               <label class="item radio-btn">
+                  <input type="radio" name="send-recomendation">
+                  <span></span>
+                  <div class="item__inner">
+                     <div class="item__inner-image">
+                        <p class="placeholder ">СК</p>
+                        <img class="image hide" src="" alt="user">
+                     </div>
+                     <div class="item__inner-text">
+                        <p class="text-s16-h22-w500">Сидоров Константин</p>
+                        <p class="text-s12-h14-w500">Бухгалтер</p>
+                     </div>
+                  </div>
                </label>
             </div>
             <div class="button">
-               <button class="cancel-btn text-s14-h20-w500">Отмена</button>
-               <button class="send-btn text-s14-h20-w500">Отправить</button>
+               <button class="cancel text-s14-h20-w500">Отмена</button>
+               <button class="send text-s14-h20-w500">Отправить</button>
             </div>
          </div>
          <div class="no-employees__block">
@@ -571,19 +760,65 @@
          </div>
          <button class="close-popup"></button>
       </div>
+
+      <!-- попап успешной отправки письма -->
+      <div class="popup__send-success ">
+         <img src="images/success-icon.svg" alt="success">
+         <h5 class="text-s22-h28-w500">Рекомендательное письмо отправленно</h5>
+         <button class="my__files-btn text-s16-h22-w500">Мои файлы</button>
+      </div>
+
+      <!-- попап сохранения письма -->
+      <div class="popup__save-letter ">
+         <img src="images/success-icon.svg" alt="success">
+         <h5 class="text-s22-h28-w500">Рекомендательное письмо сохранено</h5>
+      </div>
+
+      <!-- попап продолжить создание -->
+      <div class="popup__continue-create ">
+         <h5 class="text-s18-h22-w500">У вас есть незаконченное письмо. Хотите продолжить создание?</h5>
+         <div class="button">
+            <button class="continue__create">Продолжить</button>
+            <button class="new__create">Создать новое</button>
+         </div>
+         <button class="close-popup"></button>
+      </div>
+
+      <!-- попап завершить создание письма -->
+      <div class="popup__cancel-create ">
+         <h5 class="text-s18-h22-w500">Если вы выйдите, то результат не сохраниться. Вы действительно хотите выйти?</h5>
+         <div class="button">
+            <button class="cancel__create">Выйти</button>
+            <button class="continue__create">Продолжить</button>
+         </div>
+         <button class="close-popup"></button>
+      </div>
+
+      <!-- попап удаления элемента -->
+      <div class="popup__delete-letter ">
+         <h5 class="text-s24-h32-w500">Удаление файла</h5>
+         <p class="text-s14-h20-w400">Вы уверены, что хотите удалить <span>файл “Мой файл 1”</span>? Уже отправленные
+            файлы останутся у получателей</p>
+         <div class="button">
+            <button class="cancel">Отмена</button>
+            <button class="delete">Удалить</button>
+         </div>
+         <button class="close-popup"></button>
+      </div>
+
    </div>
 
-   <template id="document-fragment">
-      <!-- шаблон для добавленного рекомендательного письма -->
-      <div class="letters__item" id="letters__item" data-value="letter-1">
-         <div class="letters__item-title">
-            <label class="letters__item-checkbox checkbox-btn">
+   <!-- шаблон для добавленного рекомендательного письма -->
+   <template id="letter__item">
+      <div class="letter__item" data-id="">
+         <div class="letter__item-title">
+            <label class="letter__item-checkbox checkbox-btn">
                <input type="checkbox">
                <span></span>
             </label>
             <p class="name text-s16-h22-w500">Васильев В. В.</p>
          </div>
-         <div class="letters__item-description">
+         <div class="letter__item-description">
             <p class="text-s14-h20-w400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                aliquam eum explicabo eligendi expedita beatae laudantium neque consequuntur consectetur
                atque dolores ducimus aspernatur, perferendis officiis rerum amet blanditiis eius. Nulla
@@ -591,23 +826,42 @@
                perspiciatis illum dolores amet sequi necessitatibus optio! Ipsa.</p>
             <button class="open-preview text-s12-h14-w500">Открыть предпросмотр</button>
          </div>
-         <p class="letters__item-create-date text-s12-h14-w400">2 марта 2022</p>
-         <div class="letters__item-btn">
-            <button class="letters__item-send"></button>
-            <button class="letters__item-edit"></button>
-            <button class="letters__item-delete"></button>
+         <p class="letter__item-create-date text-s12-h14-w400">2 марта 2022</p>
+         <div class="letter__item-btn">
+            <button class="letter__item-send"></button>
+            <button class="letter__item-edit"></button>
+            <button class="letter__item-delete"></button>
          </div>
       </div>
-      <!-- шаблон для пользователя в попапе отправить рекомендацию -->
-      <label class="item radio-btn" id="send__recomendation-user">
+   </template>
+
+   <!-- шаблон для пользователя в попапе отправить рекомендацию -->
+   <template id="send__popup-item">
+      <label class="item radio-btn">
          <input type="radio" name="send-recomendation">
          <span></span>
-         <p class="text-s16-h22-w400">Александров Дмитрий</p>
+         <div class="item__inner">
+            <div class="item__inner-image">
+               <p class="placeholder ">АД</p>
+               <img class="image hide" src="" alt="user">
+            </div>
+            <div class="item__inner-text">
+               <p class="text-s16-h22-w500">Александров Дмитрий</p>
+               <p class="text-s12-h14-w500">Костюмер</p>
+            </div>
+         </div>
       </label>
    </template>
 
+
+
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/plugins/rangePlugin.js"></script>
+   <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
 
    <script type="module" src="./js/script.js"></script>
 </body>

@@ -1,0 +1,77 @@
+.section-step {
+   .button {
+      display: flex;
+      margin-top: 8px;
+      .back,
+      .next,
+      .save,
+      .send {
+         border-radius: 6px;
+         -webkit-border-radius: 6px;
+         -moz-border-radius: 6px;
+         -ms-border-radius: 6px;
+         -o-border-radius: 6px;
+      }
+      .back {
+         position: relative;
+         color: var(--gray-850);
+         background-color: var(--gray-200);
+         padding: 8px 20px 8px 30px;
+         margin-right: auto;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.80294 11.8327L1.4696 6.49935L6.80294 1.16602' stroke='%23606483' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+         }
+      }
+      .next {
+         position: relative;
+         color: var(--white);
+         background-color: var(--orange-600);
+         padding: 8px 30px 8px 20px;
+         margin-left: auto;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.24741 11.8327L6.58074 6.49935L1.24741 1.16602' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+         }
+      }
+      .save {
+         color: var(--gray-850);
+         background-color: var(--white);
+         border: 1px solid var(--gray-850);
+         padding: 8px 20px;
+      }
+      .send {
+         color: var(--white);
+         background-color: var(--orange-600);
+         padding: 8px 24px;
+      }
+      .button__inner {
+         display: flex;
+         gap: 10px;
+      }
+   }
+}
